@@ -1,0 +1,125 @@
+@import "../../../css-config/mixins.scss";
+
+.main-banner{
+    padding: 40px 0px;
+    position: relative;
+    width: 100%;
+    background : linear-gradient(to right , #8e2de2 , #4a00e0);
+    @include md{
+        height: calc(100vh - 80px);
+    }
+
+    .banner-content{
+        height: 100%;
+        display: flex;
+        // justify-content: flex-end;
+        flex-direction: column;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 0 auto;
+
+        @include md{
+          flex-direction: row;
+          max-width: 1200px;
+        }
+
+    .banner-img{
+        width: 200px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        animation: rotate3d 10s infinite linear;
+        // margin-top: 20px;
+        @include md{
+            // width: 600px !important;
+            margin-right: 60px;
+            margin-top: 50px;
+            margin-bottom: 0;
+            padding-bottom: 30px;
+            padding-left: 70px;
+        }
+        @include xxl{
+            width: 600px;
+            margin-right: 60px;
+            margin-top: 50px;
+            margin-bottom: 0;
+        }
+    }
+
+    .text-content{
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap : 30px;
+        align-items: center;
+
+        @include md{
+            justify-content: center; 
+            margin-left: 100px;
+        }
+        
+        h1{
+            font-size: 60px;
+            font-weight: 700;
+            text-align: justify;
+
+            @include md{
+                font-size: 160px;
+                margin-bottom: 35px;
+            }
+        }
+
+        p{
+            max-width: 300px;
+            font-size: 14px;
+            line-height: 1.5;
+             @include md{
+                font-size: 16px;
+                max-width: 600px;
+                margin-top: 35px;
+                font-weight: 400;
+                line-height: 1.5
+             }
+        }
+    }
+
+    .ctas{
+        display: flex;
+        align-items: center;
+        gap : 20px;
+    
+        .btn-cta{
+            text-transform: uppercase;
+            border: 2px solid #fff;
+            // width: 300px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: .3s ease-in-out;
+            font-weight: 550;
+        
+            &.v2{
+                background-color: white;
+                color: #000;
+
+            }
+            &:hover{
+                opacity: 0.6;
+                transition: .3s ease-in-out;
+            }
+        }
+    }
+
+
+
+    }
+    
+}
+
+@keyframes rotate3d {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }

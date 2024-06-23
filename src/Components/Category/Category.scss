@@ -1,0 +1,42 @@
+@import "../../css-config/mixins.scss";
+
+.main-category{
+    padding: 30px 15px;
+    width: 100%;
+    .card-stack-img{
+      max-width: 1200px;
+      margin: 0 auto;
+       display: flex;
+       align-items: center;
+       flex-direction: row;
+       overflow-x: auto;
+    //    justify-content: center;
+       scroll-snap-type: x mandatory;
+       gap : 15px;
+       width: 100%;
+       white-space: nowrap;
+       -webkit-overflow-scrolling: touch;
+
+
+       @include md{
+        flex-direction: row;
+        justify-content: center;
+        overflow-x: visible;
+        white-space: normal;
+        scroll-snap-type: none;
+
+       }
+
+       .category-img{
+        width: 300px;
+        border-radius: 6px;
+        scroll-snap-align: start;
+        transition: .3s linear;
+       }
+       .category-img:hover{
+        transform: scale(1.05);
+       }
+       
+     
+    }
+}

@@ -1,0 +1,91 @@
+@import "../../css-config/mixins.scss";
+
+.cart-panel{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 120;
+
+    .opac-layer{
+        background-color: rgba(0,0,0,.5);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .cart-content{
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        position: relative;
+        padding: 10px 15px;
+        // z-index: 1;
+        display: flex;
+        flex-direction: column;
+        animation: slideCartWindow 0.3s ease forwards;
+        @include md{
+            width: 360px;
+        }
+
+        .cart-header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            font-weight: 500;
+            .close-btn{
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                .text{
+                    text-transform: uppercase;
+                }
+                &:hover{
+                    opacity: 0.5;
+                }
+            }
+        }
+        .empty-cart{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            text-transform: uppercase;
+            margin-top: 180px;
+        }
+
+        .cart-footer{
+            display: flex;
+            // align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 100px;
+           
+            
+
+            .subtotal{
+                display: flex;
+                justify-content: space-between;
+                font-weight: 600;
+                font-size: 18px;
+            }
+        }
+
+    }
+}
+
+@keyframes slideCartWindow {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

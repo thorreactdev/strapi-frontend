@@ -1,0 +1,101 @@
+@import "../../../css-config/mixins.scss";
+
+.main-search-div{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 2000;
+
+    .form-field{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border-bottom: 1px solid rgba(0,0,0,.1);
+        padding: 10px 50px;
+        color: #212121;
+
+        @include md{
+            padding: 20px 50px;
+        }
+
+        &::placeholder{
+            color: #212121;
+        }
+        
+
+        .search-input{
+            border: none;
+            outline: none;
+            width: 100%;
+            height: 70px;
+            text-align: center;
+            font-size:20px;
+            text-transform: uppercase;
+            font-weight: bold;
+
+            @include md{
+                font-size: 48px;
+            }
+            // background-color: red;
+        }
+    }
+
+    .product-data{
+        margin: 20px 0px;
+        height: calc(100vh - 140px);
+        overflow-y: scroll;
+        max-width: 800px;
+        margin: 0 auto;
+        cursor: pointer;
+        
+
+        .single-product-data{
+            display: flex;
+            align-items: center;
+            // justify-content: center;
+            gap: 18px;
+            margin-top: 10px;
+            // background-color: #333;
+            padding: 10px 20px;
+            // color: #fff;
+
+            .text{
+                display: flex;
+                // align-items: center;
+                flex-direction: column;
+                gap: 3px;
+
+            }
+        }
+
+        .no-product-found{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 15px;
+
+            .text2{
+                font-size: 20px;
+                font-weight: bold;
+
+            }
+        }
+
+        .search-query{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 10px;
+
+        }
+    }
+
+    
+}

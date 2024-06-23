@@ -1,0 +1,50 @@
+@import "../../css-config/mixins.scss";
+
+.main-order-div{
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0px 10px;
+    min-height: 80vh;
+
+    .btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    @include md{
+        padding: 0;
+    }
+
+    h1{
+        margin-bottom: 40px;
+        text-align: center;
+    }
+   
+    .mapped-div{
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+        .order-card{
+            background-color: rgba(0,0,0,.05);
+            padding: 15px;
+
+
+            .product-detail{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+            }
+
+            .order-card2{
+                display: flex;
+                align-items: center;
+            }
+        }
+
+    }
+}

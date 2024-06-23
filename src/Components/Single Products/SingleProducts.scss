@@ -1,0 +1,179 @@
+@import "../../css-config/mixins.scss";
+
+.single-prod-main{
+    margin: 20px 6px;
+    @include md{
+        margin: 75px 0px;
+    }
+
+    .layout{
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
+
+        @include md{
+            max-width: 1200px;
+        }
+
+    .single-prod-detail{
+        display: flex;
+        flex-direction: column;
+        gap : 25px;
+
+        @include md{
+            flex-direction: row;
+        }
+
+        .single-prod-left-div{
+            background-color: rgba(0,0,0,0.05);
+            width: 100%;
+            position: relative;
+            @include md{
+                width: 600px;
+                height: 600px;
+                
+            }
+        img{
+            width: 100%;
+            display: block;
+            transition: .3s ease-in-out;
+            &:hover{
+                animation: rotateonHover 5s linear infinite ;
+            }
+
+            @include md{
+                width: 600px;
+                height: 600px;
+            }
+        }
+        .wishlist-btn{
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 15px;
+            background-color: rgba(0,0,0,.2);
+            color: #fff;
+            cursor: pointer;
+
+        }
+        }
+
+        .single-prod-right-div{
+            @include md{
+                margin-top: 10px;
+            }
+
+            .right-side-text{
+                display: flex;
+                flex-direction: column;
+                gap : 18px;
+
+            .product-title{
+                font-size: 20px;
+                font-weight: bold;
+            
+
+                @include md{
+                    font-size: 23px;
+                }
+            }
+            .desc-text{
+               font-size: 14px;
+                color: #6b6b6b;
+                @include md{
+                    font-size: 17px;
+
+                }
+            }
+
+            }
+        
+            .cart-buttons{
+                display: flex;
+                margin-top: 30px;
+                @include md{
+                    margin-top: 30px;
+                }
+            .quantity-button{
+                display: flex;
+                width: fit-content;
+                height: 50px;
+                border: 2px solid rgba(0,0,0,0.2);
+                margin-right: 10px;
+
+                span{
+                    width: 40px;
+                    font-size: 18px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #6b6b6b;
+                    padding: 10px;
+                    cursor: pointer;
+                    &:nth-child(1){
+                        border-right: 2px solid rgba(0,0,0,.2);
+                    }
+                    &:nth-child(2){
+                        border-right: 2px solid rgba(0,0,0,.2);
+                    }
+                }
+            }
+            .cart-button{
+                outline: 0;
+                border: 0;
+                height: 50px;
+                width: 180px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                font-size: 16px;
+                color: #fff;
+                background-color:#8e2de2;
+                cursor: pointer;
+                
+            }
+            }
+            .category-info{
+                display: flex;
+                gap : 7px;
+                margin-top: 15px;
+                font-size: 18px;
+
+                .category-text{
+                    font-weight: bold;
+                }
+            }
+
+            .share-products{
+                margin-top: 18px;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+
+                .share-text{
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+
+                .social-icons{
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+    }
+}
+
+@keyframes rotateonHover {
+    from {
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+    
+}

@@ -1,0 +1,20 @@
+@import "../../css-config/mixins.scss";
+.main-wishlist{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+
+    .empty-wishlist{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .text{
+            text-transform: capitalize;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    }
+}

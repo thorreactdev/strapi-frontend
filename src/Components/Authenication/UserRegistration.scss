@@ -1,0 +1,40 @@
+@import "../../css-config/mixins.scss";
+
+.main-register-div {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0px 20px;
+    
+  @include md {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-bottom: 90px;
+    padding: 0px;
+  }
+
+  .text{
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .input-fields {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .remember-me{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+   
+  
+  
+  }
+}
+

@@ -1,0 +1,144 @@
+@import "../../css-config/mixins.scss";
+
+.main-header {
+  width: 100%;
+  background-color: #000;
+  color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0 25px;
+  cursor: pointer;
+
+  @include md {
+    // padding: 0 20px;
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @include md {
+      height: 80px;
+      max-width: 1400px;
+    }
+
+    .list-item {
+      display: none;
+      align-items: center;
+      gap: 20px;
+      @include md {
+        display: flex;
+      }
+      .list-item-name {
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+
+    .logo {
+      font-size: 22px;
+      @include md {
+        margin-right: -3%;
+      }
+      .logo-text {
+        font-weight: 600;
+        @include md {
+          font-size: 34px;
+          // text-align: center;
+        }
+      }
+    }
+
+    .header-icons {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 18px;
+
+      .single-icons {
+        @include md {
+          font-size: 30px;
+        }
+      }
+      .cart-icon {
+        position: relative;
+        span {
+          position: absolute;
+          background-color: #8e2de2;
+          min-width: 20px;
+          border-radius: 50%;
+          text-align: center;
+          top: -6px;
+          right: -10px;
+          font-size: 14px;
+        }
+        
+      }
+
+      .cart-wishlist{
+        margin-top: -10px;
+      }
+
+     
+
+      .user-header-profile {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .not-authenicated-div {
+        display: none;
+
+        @include md {
+          display: flex;
+          gap: 10px;
+        }
+      }
+
+      .login-detials{
+        display: none;
+         @include md{
+          display: block;
+
+         }
+      }
+    }
+  }
+  &.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: linear 0.2s ease-in-out;
+    animation: stickyHeader 0.4s linear forwards;
+    z-index: 100;
+
+    @include md {
+      animation: stickyHeaderMd 0.4s linear forwards;
+    }
+  }
+}
+
+@keyframes stickyHeader {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@include md {
+  @keyframes stickyHeaderMd {
+    0% {
+      transform: translateY(80px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
